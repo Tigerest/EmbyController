@@ -352,7 +352,7 @@ class User extends BaseController
                         $findPasswordTemplate = str_replace('{Email}', $Email, $findPasswordTemplate);
                         $findPasswordTemplate = str_replace('{SiteUrl}', $SiteUrl, $findPasswordTemplate);
 
-                        sendEmailForce($user->email, '找回密码——算艺轩', $findPasswordTemplate);
+                        sendEmailForce($user->email, '找回密码——虎窝', $findPasswordTemplate);
                         sendTGMessage($user->id, "您正在尝试找回密码，如果不是您本人操作，请忽略此消息。");
                         sendStationMessage($user->id, "您正在尝试找回密码，如果不是您本人操作，请忽略此消息。");
                         $code = '';
@@ -657,7 +657,7 @@ class User extends BaseController
         $verifyCodeTemplate = str_replace('{Email}', $email, $verifyCodeTemplate);
         $verifyCodeTemplate = str_replace('{SiteUrl}', $SiteUrl, $verifyCodeTemplate);
 
-        sendEmailForce($email, '【' . $code . '】算艺轩验证码', $verifyCodeTemplate);
+        sendEmailForce($email, '【' . $code . '】虎窝验证码', $verifyCodeTemplate);
         return json(['code' => 200, 'message' => '验证码已发送']);
     }
 

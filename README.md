@@ -2,7 +2,7 @@
 
 ## 演示以及最新Beta功能
 
-- [影视管理-算艺轩](https://randallanjie.com/media)
+- [影视管理-虎窝](https://randallanjie.com/media)
 - [TG群组](https://t.me/randall_home)
 
 ## 概述

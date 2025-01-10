@@ -873,7 +873,7 @@ class Server extends BaseController
                             $mediaMaturityTemplate = str_replace('{SiteUrl}', $SiteUrl, $mediaMaturityTemplate);
 
                             sendTGMessage($embyUser['userId'], '您的Emby账号已自动续期，当前有效期至： <strong>' . $activateTo . '</strong>');
-                            sendEmail($email, '影视站自动续期提醒 - 算艺轩', $mediaMaturityTemplate);
+                            sendEmail($email, '影视站自动续期提醒 - 虎窝', $mediaMaturityTemplate);
 
                         } else {
                             $embyUserId = $embyUser['embyId'];
@@ -906,7 +906,7 @@ class Server extends BaseController
                             $mediaMaturityTemplate = str_replace('{SiteUrl}', $SiteUrl, $mediaMaturityTemplate);
 
                             sendTGMessage($embyUser['userId'], '您的Emby账号已到期，已经禁止使用。');
-                            sendEmail($email, '影视站到期提醒 - 算艺轩', $mediaMaturityTemplate);
+                            sendEmail($email, '影视站到期提醒 - 虎窝', $mediaMaturityTemplate);
                         }
                     }
                 } else if ($embyUser['activateTo'] != null && strtotime($embyUser['activateTo']) - 86400 < time() && strtotime($embyUser['activateTo']) > time()) {
@@ -941,7 +941,7 @@ class Server extends BaseController
                         $mediaMaturityTemplate = str_replace('{SiteUrl}', $SiteUrl, $mediaMaturityTemplate);
 
                         sendTGMessage($embyUser['userId'], '您的Emby账号已自动续期，当前有效期至： <strong>' . $activateTo . '</strong>');
-                        sendEmail($email, '影视站自动续期提醒 - 算艺轩', $mediaMaturityTemplate);
+                        sendEmail($email, '影视站自动续期提醒 - 虎窝', $mediaMaturityTemplate);
 
                     } else {
                         $userModel = new UserModel();
@@ -962,7 +962,7 @@ class Server extends BaseController
                         $mediaSoonMaturityTemplate = str_replace('{SiteUrl}', $SiteUrl, $mediaSoonMaturityTemplate);
 
                         sendTGMessage($embyUser['userId'], '您的Emby账号即将到期，到期后禁用需要重新激活账号，如需继续使用请及时续费，以免影响您的使用。如果开通了自动续期且余额足够请忽略此消息。');
-                        sendEmail($email, '影视站即将到期提醒 - 算艺轩', $mediaSoonMaturityTemplate);
+                        sendEmail($email, '影视站即将到期提醒 - 虎窝', $mediaSoonMaturityTemplate);
                     }
                 } else if ($embyUser['activateTo'] != null && strtotime($embyUser['activateTo']) < time()) {
                     $embyUserId = $embyUser['embyId'];
@@ -1207,7 +1207,7 @@ class Server extends BaseController
                     $mediaMaturityTemplate = str_replace('{Commodity}', $commodity, $mediaMaturityTemplate);
                     $mediaMaturityTemplate = str_replace('{Money}', $money, $mediaMaturityTemplate);
 
-                    sendEmail($email, '账单支付成功 - 算艺轩', $mediaMaturityTemplate);
+                    sendEmail($email, '账单支付成功 - 虎窝', $mediaMaturityTemplate);
                 } else {
                     return json([
                         'code' => 400,
